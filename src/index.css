@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.cart-and-search-box{
+  display: flex;
+}
+
+.cart-and-search-box > button{
+  margin-right: 3px;
+}
+
+.cart-and-search-box > form > input{
+  margin-right: 3px;
+}

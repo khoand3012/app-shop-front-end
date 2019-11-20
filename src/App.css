@@ -20,3 +20,20 @@
 .App-link {
   color: #09d3ac;
 }
+
+.container {
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.footer {
+  color: white;
+}
+.logo {
+  max-width: 300px;
+}
