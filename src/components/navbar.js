@@ -15,6 +15,9 @@ import {
   Button,
   Input
 } from "reactstrap";
+
+import { Link } from 'react-router-dom';
+
 //import { Button } from "bootstrap/dist/js/bootstrap.bundle";
 
 const NavigationBar = props => {
@@ -26,12 +29,12 @@ const NavigationBar = props => {
       <div className="container-fluid">
         <div className="row align-items-center justify-content-center">
           <Navbar color="light" expand="lg" className="col-md-12">
-            <NavbarBrand href="/" className="col-md-3">App Shop</NavbarBrand>
+            <NavbarBrand href="/index" className="col-md-3"><Link to={'/'} className="text-decoration-none">App Shop</Link></NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar className="justify-content-center col-md-6">
               <Nav className="navbar navbar-expand-md" navbar>
                 <NavItem className="btn btn-light">
-                  <NavLink href="#">Home</NavLink>
+                  <NavLink><Link to={'/'} className="text-decoration-none">Home</Link></NavLink>
                 </NavItem>
                 <UncontrolledDropdown nav inNavbar className="btn btn-light">
                   <DropdownToggle nav caret>
@@ -54,7 +57,10 @@ const NavigationBar = props => {
                   </DropdownMenu>
                 </UncontrolledDropdown>
                 <NavItem className="btn btn-light">
-                  <NavLink href="/contacts">Contact Us</NavLink>
+                  <NavLink><Link to={'/contact'} className="text-decoration-none">Contact Us</Link></NavLink>
+                </NavItem>
+                <NavItem className="btn btn-light">
+                  <NavLink><Link to={'/about'} className="text-decoration-none">About Us</Link></NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
